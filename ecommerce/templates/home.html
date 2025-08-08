@@ -1,0 +1,187 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>UA</title>
+  <meta name="description" content="Recreation of the uploaded design — responsive HTML/CSS/JS single file." />
+  <link rel="stylesheet" href="{% static "css/style.css" %}? v=2">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">UA</div>
+        <div>
+          <div style="font-weight:800;color:white">Underground Apparel</div>
+          <div style="font-size:13px;color:var(--muted);margin-top:2px">Creative UI template</div>
+        </div>
+      </div>
+
+        <nav aria-label="Main navigation">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#testimonials">Testimonials</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="cta">
+        <button class="btn btn-ghost">Log in</button>
+        <a href="#contact"><button class="btn btn-primary">Get started</button></a>
+        <button class="mobile-toggle" aria-expanded="false" aria-controls="mobile-menu" id="mobileToggle">☰</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-left">
+          <span class="kicker fade-in delay-1">New • 2025</span>
+          <h1 class="fade-in delay-2">Beautiful UI templates, ready for your next project.</h1>
+          <p class="fade-in delay-3">A clean, modern template with thoughtful spacing, contrast, and micro-interactions — perfect for landing pages, product showcases, or portfolios.</p>
+
+          <div class="hero-actions fade-in delay-3">
+            <button class="btn btn-primary">Start free trial</button>
+            <button class="btn btn-ghost">Explore demos</button>
+          </div>
+
+          <div style="margin-top:18px;display:flex;gap:10px;align-items:center">
+            <div class="feature-pill"><strong>120+</strong> components</div>
+            <div class="muted">| Trusted by designers worldwide</div>
+          </div>
+        </div>
+
+        <aside class="card fade-in delay-2" aria-hidden="false">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+            <div style="display:flex;gap:10px;align-items:center">
+              <div class="avatar">UI</div>
+              <div>
+                <div style="font-weight:800;color:white">Underground Apparel</div>
+                <div class="muted">Design system • v1.2</div>
+              </div>
+            </div>
+            <div style="text-align:right">
+              <div style="font-weight:900;font-size:20px;color:white">$0</div>
+              <div class="muted">Free forever</div>
+            </div>
+          </div>
+
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <div style="flex:1">
+              <div class="muted">Projects</div>
+              <div style="font-weight:800;color:white;font-size:18px">320+</div>
+            </div>
+            <div style="flex:1">
+              <div class="muted">Downloads</div>
+              <div style="font-weight:800;color:white;font-size:18px">18k</div>
+            </div>
+          </div>
+
+          <hr style="border:none;border-top:1px solid rgba(255,255,255,0.03);margin:16px 0">
+
+          <div style="display:flex;gap:10px;align-items:center">
+            <div style="flex:1;color:var(--muted)">Upgrade for team features — real-time collaboration, versioning, and priority support.</div>
+            <button class="btn btn-primary">Upgrade</button>
+          </div>
+        </aside>
+      </section>
+
+      <section id="features">
+        <h2 style="color:white;margin:0 0 14px">Features</h2>
+        <p class="muted" style="margin-top:0;max-width:70ch">Everything you need to ship beautiful experiences fast — components, icons, responsive layouts, and production-ready patterns.</p>
+
+        <div class="grid" style="margin-top:22px">
+          <div class="feature fade-in">
+            <h3>Responsive layout</h3>
+            <p>Built mobile-first with adaptable grid and flex utilities so your site looks great on any device.</p>
+          </div>
+          <div class="feature fade-in">
+            <h3>Design system</h3>
+            <p>Tokens for color, spacing, and typography make scaling consistent UIs easy across teams.</p>
+          </div>
+          <div class="feature fade-in">
+            <h3>Interaction-ready</h3>
+            <p>Micro-interactions and simple JS utilities included for dropdowns, modals and tabs.</p>
+          </div>
+          <div class="feature fade-in">
+            <h3>Components</h3>
+            <p>Cards, forms, tables, hero sections, and more — all in one package.</p>
+          </div>
+          <div class="feature fade-in">
+            <h3>Accessible</h3>
+            <p>Focus states, semantic HTML, and keyboard-friendly controls where possible.</p>
+          </div>
+          <div class="feature fade-in">
+            <h3>Customizable</h3>
+            <p>Use CSS variables or swap tokens to match your brand quickly.</p>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" style="margin-top:16px">
+        <h2 style="color:white;margin:0 0 14px">What people say</h2>
+        <div class="testimonials">
+          <div class="testimonial fade-in">
+            <div style="font-weight:800;color:white;margin-bottom:8px">"Fast to work with — shipped a product in days."</div>
+            <div class="muted">— Maya P., Product Designer</div>
+          </div>
+          <div class="testimonial fade-in">
+            <div style="font-weight:800;color:white;margin-bottom:8px">"The components are consistent and easy to extend."</div>
+            <div class="muted">— Arjun S., Frontend Engineer</div>
+          </div>
+          <div class="testimonial fade-in">
+            <div style="font-weight:800;color:white;margin-bottom:8px">"Great documentation and examples."</div>
+            <div class="muted">— Lena K., Developer</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:36px">
+        <h2 style="color:white;margin:0 0 10px">Get in touch</h2>
+        <p class="muted">Send a quick message and we’ll get back within 24 hours.</p>
+
+        <form onsubmit="handleContact(event)" style="margin-top:14px">
+          <div class="contact">
+            <input class="input" type="text" placeholder="Your name" required id="name">
+            <input class="input" type="email" placeholder="Email" required id="email">
+            <input class="input" type="text" placeholder="Subject" id="subject">
+            <textarea id="message" placeholder="Message" required></textarea>
+          </div>
+
+          <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
+            <button class="btn btn-primary" type="submit">Send message</button>
+            <div class="muted">Or email us at <strong style="color:white">hello@stellar.ui</strong></div>
+          </div>
+        </form>
+      </section>
+
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>
+          <div style="font-weight:800;color:white">StellarDesign</div>
+          <div class="muted">Made with ❤️ for designers and devs</div>
+        </div>
+        <div class="muted">© <span id="year"></span> StellarDesign. All rights reserved.</div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Mobile navigation panel -->
+  <div id="mobile-menu" style="position:fixed;inset:0;background:linear-gradient(180deg,rgba(2,6,23,0.9),rgba(2,6,23,0.96));padding:28px;display:none;z-index:50">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px">
+      <div style="display:flex;gap:10px;align-items:center"><div class="logo">SD</div><div style="color:white;font-weight:800">StellarDesign</div></div>
+      <button id="mobileClose" style="background:transparent;border:0;color:var(--muted);font-size:22px">✕</button>
+    </div>
+    <nav style="display:flex;flex-direction:column;gap:12px">
+      <a href="#features" onclick="closeMobile()">Features</a>
+      <a href="#pricing" onclick="closeMobile()">Pricing</a>
+      <a href="#testimonials" onclick="closeMobile()">Testimonials</a>
+      <a href="#contact" onclick="closeMobile()">Contact</a>
+    </nav>
+  </div>
+
+  <script src={% static "js/script.js" %}></script>
+</body>
+</html>
