@@ -1,12 +1,12 @@
 <!doctype html>
-{% load static %}
 <html lang="en">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>UA</title>
+  <title>{% block title%} UA {% endblock %}</title>
   <meta name="description" content="Recreation of the uploaded design — responsive HTML/CSS/JS single file." />
-  <link rel="stylesheet" href="{% static "css/style.css" %}? v=2">
+  {% load static %}
+  <link rel="stylesheet" href="{% static "css/style.css" %}? v=3">
 </head>
 <body>
   <div class="container">
@@ -27,7 +27,7 @@
       </nav>
 
       <div class="cta">
-        <button class="btn btn-ghost">Log in</button>
+        <a href="{% url 'login_page' %}"><button class="btn btn-ghost">Log out</button></a>
         <a href="#contact"><button class="btn btn-primary">Get started</button></a>
         <button class="mobile-toggle" aria-expanded="false" aria-controls="mobile-menu" id="mobileToggle">☰</button>
       </div>
@@ -136,24 +136,25 @@
         </div>
       </section>
 
-      <section id="contact" style="margin-top:36px">
-        <h2 style="color:white;margin:0 0 10px">Get in touch</h2>
-        <p class="muted">Send a quick message and we’ll get back within 24 hours.</p>
+        
+        <section id="contact" style="margin-top:36px">
+          <h2 style="color:white;margin:0 0 10px">Get in touch</h2>
+          <p class="muted">Send a quick message and we’ll get back within 24 hours.</p>
 
-        <form onsubmit="handleContact(event)" style="margin-top:14px">
-          <div class="contact">
-            <input class="input" type="text" placeholder="Your name" required id="name">
-            <input class="input" type="email" placeholder="Email" required id="email">
-            <input class="input" type="text" placeholder="Subject" id="subject">
-            <textarea id="message" placeholder="Message" required></textarea>
-          </div>
+          <form method="POST">
+              {% csrf_token %}
+              <div class="contact">
+                <input class="input" type="text"  placeholder="Your name" name="name" required id="name">
+                <input class="input" type="text"  placeholder="Subject" name="subject" required id="subject">
+                <input class="input" type="email"  placeholder="Email" name="email" required id="email">
+                <textarea id="message"  placeholder="Message" name="message" required></textarea>
 
-          <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
-            <button class="btn btn-primary" type="submit">Send message</button>
-            <div class="muted">Or email us at <strong style="color:white">hello@stellar.ui</strong></div>
-          </div>
-        </form>
-      </section>
+                <button class="btn btn-primary" type="submit">Send message</button>
+              </div>
+                <div class="muted">Or email us at <strong style="color:white">karlanthony521@gmail.com</strong></div>
+          </form>
+          
+        </section>
 
     </main>
 

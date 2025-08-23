@@ -1,1 +1,21 @@
-{% extends "home.html" %}
+{% load static %}
+<link rel="stylesheet" href="{% static "css/style.css" %}? v=3">
+<h2>Login</h2>
+{% if messages %}
+    {% for message in messages %}
+        <p style="color:red;">{{ message }}</p>
+    {% endfor %}
+{% endif %}
+
+<form method="post">
+    {% csrf_token %}
+    <label>Username:</label><br>
+    <input class="input" type="text" name="username" required><br><br>
+
+    <label>Password:</label><br>
+    <input class="input" type="password" name="password" required><br><br>
+
+    <button class="btn btn-primary" type="submit">Login</button>
+</form>
+
+<p>Don't have an account? <a href="{% url 'create_account' %}">Register here</a></p>

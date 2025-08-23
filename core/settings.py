@@ -27,6 +27,13 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Smtp
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER = "karlanthonydelacruz128@gmail.com"
+EMAIL_HOST_PASSWORD = "mvcd pejr zmbn wfmj"
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_BACKEND  = "django.core.mail.backends.smtp.EmailBackend"
 
 # Application definition
 
@@ -85,6 +92,10 @@ DATABASES = {
     }
 }
 
+
+# Stripe keys card or payment method
+# STRIPE_PUBLIC_KEY = " "
+# STRIPE_SECRET_KEY = " "
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
